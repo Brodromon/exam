@@ -35,10 +35,11 @@ import axios from 'axios'
         computed: {
             filterPosts() {
                 return this.news.filter((post) => {
-                    if(post.title.toLowerCase().includes(this.search.toLowerCase())) {
+                    if(post.title.toLowerCase().includes(this.search.toLowerCase())) 
                         return post.title.toLowerCase().includes(this.search.toLowerCase())
-                    } else if(post.description.toLowerCase().toLowerCase().includes(this.search.toLowerCase()))
-                    return post.description.toLowerCase().toLowerCase().includes(this.search.toLowerCase())
+
+                    else if(post.description.toLowerCase().includes(this.search.toLowerCase()))
+                        return post.description.toLowerCase().includes(this.search.toLowerCase())
                 })
             }
         }
@@ -120,7 +121,7 @@ body {
 }
 @media screen and (max-width: 480px) {
     .app__news-text img {
-        display: none
+        display: none;
     }
 }
 </style>
